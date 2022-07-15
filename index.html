@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/calculadora.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Galeria de medidas</title>
+</head>
+<body>
+    <!-- Cabeçalho com ttulo e menu-->
+    <header class="container header">
+        <h1>Calcule o que quiser</h1>
+        <nav class="menu">
+            <a href="#IMC">IMC</a>
+            <a href="#Conversor">Conversor</a>
+            <a href="#Solucionador-de-equações">Equação</a>
+        </nav>
+    </header>
+
+    <!--IMC-->
+    <div class="container bodyblock" id="IMC">
+        <h1>Tabela IMC</h1>
+        <div style="display: grid;grid-template-columns:1fr 1fr" class="centraliza">
+        <div style="padding: 1rem;">
+            <h3>IMC</h3>
+            <p>Menos do que 18,5</p>
+            <p>Entre 18,5 e 24,9</p>
+            <p>Entre 25 e 29,9</p>
+            <p>Entre 30 e 34,9</p>
+            <p>Entre 35 e 39,9</p>
+            <p>Mais do que 40</p>
+        </div>
+        <div style="padding: 1rem;">
+            <h3>Resultado</h3>
+            <p>Abaixo do peso</p>
+            <p>Peso normal</p>
+            <p>Sobrepeso</p>
+            <p>Obesidade grau 1</p>
+            <p>Obesidade grau 2</p>
+            <p>Obesidade grau 3</p>
+        </div>
+        </div>
+        <div class="centraliza">
+            <h1>Calcule seu IMC</h1>
+            <form class="formulario" method="get">
+            <input type="text" id="peso" class="peso" placeholder="Peso">
+            <input type="text" id="altura" class="altura" placeholder="Altura">
+            <button>Calcular</button>
+            </form>
+            <p class="resultado"></p>
+        </div>
+    </div>
+
+    <!--Conversor-->
+    <div class="container bodyblock" id="Conversor">
+        <h1>Conversor de medidas</h1>
+        <div class="centraliza">
+            <form class="seletorUnidade" method="get">
+                <h3>Tipo da unidade:</h3>
+                <div class="escolhaMedidas">
+                    <select id="tipoUnidade" size="1">
+                        <option value="Comprimento">Comprimento</option>
+                        <option value="Peso">Peso</option>
+                        <option value="Volume">Volume</option>
+                        <option value="Tempo">Tempo</option>
+                        <option value="Temperatura">Temperatura</option>
+                    </select>
+                </div>
+                <button>Selecionar</button>
+            </form>
+            <form class="conversor" method="get">
+                <h3>Converter de:</h3>
+                <div class="escolhaMedidas">
+                    <div class="seletor1">
+                        <select id="unidade1" size="1">
+                            <option value="1000">Quilômetro</option>
+                            <option value="100">Hectômetro</option>
+                            <option value="10">Decâmetro</option>
+                            <option value="1">Metro</option>
+                            <option value="-10">Decímetros</option>
+                            <option value="-100">Centímetros</option>
+                            <option value="-1000">Milímetros</option>
+                        </select>
+                    </div>
+                    <p>Para</p>
+                    <div class="seletor2">
+                        <select id="unidade2" size="1">
+                            <option value="1000">Quilômetro</option>
+                            <option value="100">Hectômetro</option>
+                            <option value="10">Decâmetro</option>
+                            <option value="1">Metro</option>
+                            <option value="-10">Decímetros</option>
+                            <option value="-100">Centímetros</option>
+                            <option value="-1000">Milímetros</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <input type="text" id="medida-ini" class="medida-ini" placeholder="Número da Medida">
+                <button>Converter</button>
+            </form>
+            <p class="medidaNova"></p>
+        </div>
+    </div>
+
+    <!--Solucionador de equações-->
+    <div class="container bodyblock" id="Solucionador-de-equações">
+        <h1>Solucionador de equações</h1>
+        <div class="centraliza">
+            <h3>Exemplo de formato de Equação:</h3>
+            <p>2x^2 + 3x + 1 = 0 ou 2x² + 3x + 1 = 0</p>
+            <br>
+            <form class="solucionador" method="get">
+                <input type="text" class="equacao" placeholder="Digite a equação aqui" id="equacao">
+                <button>Calcular</button>
+            </form>
+            <p class="resultado-raizes"></p>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
